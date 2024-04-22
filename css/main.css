@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+body {
+    margin: 20px;
+    font-family: "Young", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Eggshell);
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+h2 {
+    color: var(--Nutmeg);
+}
+p, span, li {
+    font-family: "Outfit", serif;
+    font-size: 16px;
+    color: var(--Wenge-Brown);
+}
+:root {
+    --Nutmeg: hsl(14, 45%, 36%);
+    --Rose-White: hsl(330, 100%, 98%);
+    --Eggshell: hsl(30, 54%, 90%);
+    --Light-Grey: hsl(30, 18%, 87%);
+    --Wenge-Brown: hsl(30, 10%, 34%);
+    --Dark-Charcoal: hsl(24, 5%, 18%);
+    --White: hsl(0, 0%, 100%);
+    --main-transition: 0.4s;
+}
+hr {
+    margin: 10px 0;
+}
+main .container {
+    width: 768px;
+    background-color: var(--White);
+    box-shadow: 0 0 15px rgb(0, 0, 0, 0.2);
+    border-radius: 20px;
+    margin: 30px;
+    padding: 40px;
+    position: relative;
+}
+main .container .main-img {
+    margin-bottom: 20px;
+}
+main .container .main-img img {
+    display: block;
+    max-width: 100%;
+    border-radius: 15px;
+}
+main .container h1 {
+    color: var(--Dark-Charcoal);
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+main .container .preperation {
+    margin: 20px 0;
+    padding: 25px;
+    background-color: var(--Rose-White);
+    border-radius: 10px;
+}
+main .container .preperation h2 {
+    margin-bottom: 15px;
+    color: #762D4A;
+}
+main .container .preperation ul {
+    list-style-position: inside;
+    list-style-type: square;
+    color: #762D4A;
+}
+main .container .preperation ul li span {
+    font-weight: bold;
+}
+main .container .preperation ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+main .container .ingredients {
+    padding: 20px 0;
+}
+main .container .ingredients h2 {
+    padding-bottom: 20px;
+}
+main .container .ingredients ul {
+    /* list-style-position: inside;
+    list-style-type: square; */
+    list-style: none;
+    color: var(--Nutmeg);
+}
+main .container .ingredients ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 15px;
+}
+main .container .ingredients ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 5px;
+    height: 5px;
+    background-color: var(--Nutmeg);
+}
+main .container hr {
+    border: none;
+    height: 1px;
+    background-color: var(--Light-Grey);
+}
+main .container .instructions {
+    padding: 20px 0;
+}
+main .container .instructions h2 {
+    padding-bottom: 20px;
+}
+main .container .instructions ol {
+    list-style: none;
+}
+main .container .instructions li {
+    position: relative;
+    counter-increment: nums;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+main .container .instructions ol li::before {
+    content: counter(nums) ".";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--Nutmeg);
+    font-weight: bold;
+}
+main .container .instructions li span {
+    font-weight: bold;
+}
+main .container .nutrition {
+    padding: 20px 0;
+}
+main .container .nutrition h2,
+main .container .nutrition p {
+    padding-bottom: 20px;
+}
+main .container .nutrition table {
+    border-spacing: 2px;
+    border: none;
+    width: 100%;
+    padding-left: 20px;
+}
+main .container .nutrition table td {
+    border-bottom: 1px solid var(--Light-Grey);
+    padding: 10px 30px;
+    color: var(--Wenge-Brown);
+}
+main .container .nutrition table td:nth-child(2) {
+    font-weight: bold;
+    font-family: "Outfit", sans-serif;
+    color: var(--Nutmeg);
+}
+@media (max-width: 850px){
+    main .container {
+        width: 500px;
+    }
+}
+@media (max-width: 580px){
+    main .container {
+        width: 350px;
+    }
+    main .container h1 {
+        font-size: 30px;
+    }
+    main .container .preperation ul li {
+        font-size: 13px;
+    }
+}
